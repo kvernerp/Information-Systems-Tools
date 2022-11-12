@@ -37,7 +37,7 @@ print('Привет, ', a)
 # Задача 6
 x = int(input('Сколько часов д.Иванов добирается до клиники?'))
 y = int(input(' А сколько минут до поликлиники?'))
-b = (x*60) + y
+b = ((x*60) + y)*2
 print(b)
 
 # Задача 7
@@ -101,11 +101,13 @@ for num in range(1, 20):
  if num % 2 == 0:
   print (num , end =' ')
 
+
 # Задача 13
 a = int(input('Введите значение:'))
 b = int(input('Введите значение:'))
 c = int(input('Введите значение:'))
 d = int(input('Введите значение:'))
+
 s = ''
 for i in range (c, d + 1):
 
@@ -113,12 +115,12 @@ for i in range (c, d + 1):
 for i in range(a, b + 1):
 
  s += '\n%s' % i
-for j in range (c, d + 1):
-
- s += '\t%s' % (i * j)
-
+ for j in range (c, d + 1):
+  
+  s += '\t%s' % (i * j)
 print('Результат: ')
 print(s)
+
 
 # Задача 14
 n = int(input('Введите размер матрицы:'))
@@ -152,9 +154,9 @@ for i in mat:
 
 # Задача 15
 import time
+from tkinter import messagebox
 a = 1
 while a==1:
- from tkinter import messagebox
  if __name__ == '__main__':
   messagebox.showinfo('Useful Python', 'Вы долго смотрели в монитор, теперь посмотрите в окно.')
   time.sleep(3600)
