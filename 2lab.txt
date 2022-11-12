@@ -1,0 +1,161 @@
+# Задача 2
+def print_hi(name):
+
+ print(f' {name}') # Press Ctrl+F8 to toggle the breakpoint.
+
+if __name__ == '__main__':
+ print_hi('Hello Word')
+
+# Задача 3
+a = 3
+print(type(a))
+a = 3.5
+print(type(a))
+a = 'qwerty'
+print(type(a))
+a = True
+print(type(a))
+a = '123'
+print(type(a))
+a = 3
+print(type(a+4))
+
+# Задача 4
+a = 5.7//1
+print(a)
+
+a = -5.7//-1
+print(a)
+
+a = 3**39
+print(a)
+
+# Задача 5
+a = input('Напишите свое имя: ')
+print('Привет, ', a)
+
+# Задача 6
+x = int(input('Сколько часов д.Иванов добирается до клиники?'))
+y = int(input(' А сколько минут до поликлиники?'))
+b = (x*60) + y
+print(b)
+
+# Задача 7
+a = False
+b = True
+c = False
+print (not a or b and c)
+print (not (a or b) and c)
+
+# Задача 8
+a = int(input())
+if a > 1900 and a < 3000:
+
+ if (a % 4 == 0 and a % 100 != 0) or (a % 400 == 0):
+  print('С Днем рождения!')
+ else:
+  print('Год обычный')
+
+else:
+ print('Год не входит в выборку')
+
+# Задача 9
+
+i = 0
+while i <= 20:
+
+ if i % 2 == 0:
+  print(i)
+ i += 1
+print('\n\n')
+
+# Задача 10
+
+x = int(input('Введите число:'))
+res = 0
+while x:
+ res += x
+x = int(input('Введите число:'))
+print(res)
+
+# Задача 11
+a = [i for i in range(2, 10 + 1)]
+check = 0
+x = int(input())
+y = int(input())
+c = 0
+f = 1
+
+if x == y:
+ print(x)
+else:
+ i = max(x, y)
+if i % min(x, y) != 0:
+ while f % min(x, y) != 0:
+  f = i * a[c]
+c += 1
+print(f)
+
+# Задача 12
+for num in range(1, 20):
+ if num % 2 == 0:
+  print (num , end =' ')
+
+# Задача 13
+a = int(input('Введите значение:'))
+b = int(input('Введите значение:'))
+c = int(input('Введите значение:'))
+d = int(input('Введите значение:'))
+s = ''
+for i in range (c, d + 1):
+
+ s += '\t%s' % i
+for i in range(a, b + 1):
+
+ s += '\n%s' % i
+for j in range (c, d + 1):
+
+ s += '\t%s' % (i * j)
+
+print('Результат: ')
+print(s)
+
+# Задача 14
+n = int(input('Введите размер матрицы:'))
+mat = [[0]*n for i in range(n)]
+st, m = 1, 0
+
+mat[n//2][n//2]=n*n
+for v in range(n//2):
+#Заполнение верхней горизонтальной матрицы
+for i in range(n-m):
+ mat[v][i+v] = st
+st+=1
+#Заполнение правой вертикальной матрицы
+for i in range(v+1, n-v):
+ mat[i][-v-1] = st
+st+=1
+#i+=1
+#Заполнение нижней горизонтальной матрицы
+for i in range(v+1, n-v):
+ mat[-v-1][-i-1] =st
+st+=1
+#i+=1
+#Заполнение левой вертикальной матрицы
+for i in range(v+1, n-(v+1)):
+ mat[-i-1][v]=st
+st+=1
+m+=2
+
+for i in mat:
+ print(*[f"{x:>5}" for x in i])
+
+# Задача 15
+import time
+a = 1
+while a==1:
+ from tkinter import messagebox
+ if __name__ == '__main__':
+  messagebox.showinfo('Useful Python', 'Вы долго смотрели в монитор, теперь посмотрите в окно.')
+  time.sleep(3600)
+
